@@ -1,0 +1,60 @@
+{
+    "title": "Listagem de usuários",
+    "filterPlaceholder": "Insira o nome, e-mail ou login...",
+    "language": "Linguagem",
+    "pageNotFound" : "Página não encontrada",
+    "pageNotFoundMessage" : "A página solicitada não pôde ser encontrada. Entre em contato com o administrador ou tente novamente.",
+    "goHomePage" : "Ir para a página inicial",
+    "loading" : "Carregando...",
+    "errorMessage" : "Ocorreu um erro. Entre em contato com o administrador ou tente novamente.",
+    "usersNotFound" : "Não foram encontrados usuários.",
+    "previousPage" : "Página anterior",
+    "nextPage": "Próxima página",
+    "firstPage": "Primeira página",
+    "lastPage": "Última página",
+    "description" : "Português",
+    "confirm" : "Confirmar",
+    "cancel": "Cancelar",
+    "columns" : [
+        {
+            "id" : "id",
+            "title" : "ID",
+            "sort" : true
+        },
+        {
+            "id" : "name",
+            "title" : "Nome",
+            "sort" : true
+        },
+        {
+            "id" : "surname",
+            "title" : "Sobrenome",
+            "sort" : true
+        },
+        {
+            "id" : "username",
+            "title" : "Login",
+            "sort" : true
+        },
+        {
+            "id" : "email",
+            "title" : "E-mail"
+        },
+        {
+            "id" : "password",
+            "title" : "Senha"
+        },
+        {
+            "id" : "phone",
+            "title" : "Telefone"
+        },
+        {
+            "id" : "registerDate",
+            "title" : "Data de registro"
+        },
+        {
+            "id" : "enabled",
+            "title" : "Habilitado"
+        }
+    ]
+}

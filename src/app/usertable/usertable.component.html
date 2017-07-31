@@ -1,0 +1,58 @@
+<table ng-show="mf.data.length > 0" class="table table-responsive table-hover table-bordered" 
+    [mfData]="users | search : ['name', 'email', 'username'] : filterValue" #mf="mfDataTable" 
+    >
+    <thead class="bg-success">
+    <tr>
+        <th *ngFor="let col of columns" class="text-center">
+            <div *ngIf="col.sort; else defultColum">
+                <mfDefaultSorter by="{{col.id}}">{{col.title}}</mfDefaultSorter> 
+            </div>
+            
+            <ng-template #defultColum>
+                {{col.title}} 
+            </ng-template>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of mf.data">
+         <td *ngFor="let col of columns" class="vertical-align-middle">
+             <div [ngSwitch]="col.id">
+                <div *ngSwitchCase="'password'" class="input-group">
+                    <input type="password" class="form-control" [value]="user[col.id]" disabled #inputPassword/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" (click)="inputPassword.type === 'text' ? inputPassword.type = 'password' : inputPassword.type = 'text'">
+                            <i [class]="inputPassword.type === 'text' ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                        </button>
+                    </span>
+                </div>
+                
+                <div *ngSwitchCase="'registerDate'">
+                    {{user[col.id] | date:'dd/MM/yyyy'}}
+                </div>
+                
+                <div *ngSwitchCase="'enabled'" class="text-center">
+                    <i [class]="user[col.id] ? 'fa fa-check' : 'fa fa-times'"></i>
+                </div>
+                
+                <div *ngSwitchDefault>
+                    {{user[col.id]}}
+                </div>
+            </div> 
+        </td> 
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td id="message"  [attr.colspan]="columns.length" *ngIf="mf.data.length == 0">
+             <div class="alert alert-success"> 
+                <strong translate="usersNotFound"></strong>
+             </div> 
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+<app-pagination [offset]="offset" [size]="itemsTotal" (pageChange)="onPageChange($event)"></app-pagination> 
+
+<button type="button" (click)="showConfirm()">CLique</button>

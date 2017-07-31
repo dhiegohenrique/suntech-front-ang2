@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 col-xs-offset-6 col-sm-offset-9 col-md-offset-10 col-lg-offset-10">
+        <select class="form-control" #langSelect (change)="changeLanguage(langSelect.value)">
+           <option *ngFor="let lang of languages" [value]="lang.id" [selected]="lang.id === defaultLang">{{lang.description}}</option> 
+        </select>
+    </div>
+</div>

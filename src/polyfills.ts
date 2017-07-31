@@ -70,3 +70,8 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Need to import at least one locale-data with intl.
  */
 // import 'intl/locale-data/jsonp/en';
+
+import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/string';
+import 'core-js/es6/array';

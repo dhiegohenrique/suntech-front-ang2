@@ -1,0 +1,33 @@
+<nav aria-label="Page navigation">
+   <ul class="pagination pull-left">
+    <li *ngFor="let pageSize of itemsPerPage" [class.active]="pageSize == limit" (click)="selectPageSize(pageSize, $event)">
+      <a href="">{{pageSize}}</a>
+    </li>
+  </ul> 
+
+  <ul class="pagination pull-right">
+    <li (click)="selectPage(1, $event)" [class.disabled]="currentPage == 1">
+      <a href="" [title]="'firstPage' | translate">&laquo;</a>
+    </li>
+    <li (click)="selectPage(currentPage - 1, $event)" [class.disabled]="currentPage == 1">
+      <a href="" [title]="'previousPage' | translate">&lsaquo;</a>
+    </li>
+    <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage - range) > 1">
+      <a href="">...</a>
+    </li>
+    <li *ngFor="let page of pages | async" [class.active]="page == currentPage">
+      <a href="" (click)="selectPage(page, $event)"> 
+        {{page}}
+      </a>
+    </li>
+    <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage + range) < totalPages">
+      <a href="">...</a>
+    </li>
+    <li (click)="selectPage(currentPage + 1, $event)" [class.disabled]="currentPage == totalPages">
+      <a href="" [title]="'nextPage' | translate">&rsaquo;</a>
+    </li>
+    <li (click)="selectPage(totalPages, $event)" [class.disabled]="currentPage == totalPages">
+      <a href="" [title]="'lastPage' | translate">&raquo;</a>
+    </li>
+  </ul>
+</nav>

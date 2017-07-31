@@ -1,0 +1,60 @@
+{
+    "title": "User list",
+    "filterPlaceholder": "Enter name, email or username...",
+    "language": "Language",
+    "pageNotFound" : "Page not found",
+    "pageNotFoundMessage" : "The requested page could not be found. Contact your administrator or try again.",
+    "goHomePage" : "Go to home page",
+    "loading" : "Loading...",
+    "errorMessage" : "An error has occurred. Please contact your administrator or try again.",
+    "usersNotFound" : "No users found.",
+    "previousPage" : "Previous page",
+    "nextPage": "Next page",
+    "firstPage": "First page",
+    "lastPage": "Last page",
+    "description" : "English",
+    "confirm" : "Confirm",
+    "cancel": "Cancel",
+    "columns" : [
+        {
+            "id" : "id",
+            "title" : "ID",
+            "sort" : true
+        },
+        {
+            "id" : "name",
+            "title" : "Name",
+            "sort" : true
+        },
+        {
+            "id" : "surname",
+            "title" : "Surname",
+            "sort" : true
+        },
+        {
+            "id" : "username",
+            "title" : "Username",
+            "sort" : true
+        },
+        {
+            "id" : "email",
+            "title" : "E-mail"
+        },
+        {
+            "id" : "password",
+            "title" : "Password"
+        },
+        {
+            "id" : "phone",
+            "title" : "Phone"
+        },
+        {
+            "id" : "registerDate",
+            "title" : "Register Date"
+        },
+        {
+            "id" : "enabled",
+            "title" : "Enabled"
+        }
+    ]
+}
