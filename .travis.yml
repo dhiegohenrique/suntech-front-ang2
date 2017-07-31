@@ -13,3 +13,4 @@ deploy:
   app: suntech-front-ang2
   on:
     repo: dhiegohenrique/suntech-front-ang2
+  skip_cleanup: true
