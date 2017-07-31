@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server",
     "build": "ng build --prod && gulp",
     "test": "ng test",
     "lint": "ng lint",
@@ -33,7 +33,8 @@
     "ngx-modal-dialog": "^0.6.0",
     "normalize-for-search": "^2.0.1",
     "rxjs": "^5.1.0",
-    "zone.js": "0.8.12"
+    "zone.js": "0.8.12",
+    "http-server": "^0.10.0"
   },
   "devDependencies": {
     "@angular/cli": "1.2.1",

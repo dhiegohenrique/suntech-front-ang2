@@ -7,7 +7,7 @@ Requisitos:
 
 Para rodar, na pasta raíz, executar:
 1) npm install;
-2) npm start;
+2) ng serve;
 3) a aplicação estará rodando em: http://localhost:4200
 
 Para rodar os testes via [Karma](https://karma-runner.github.io):
@@ -16,5 +16,8 @@ Para rodar os testes via [Karma](https://karma-runner.github.io):
 Para rodar os testes end-to-end via [Protractor](http://www.protractortest.org/):
 1) O backend deve estar rodando (https://github.com/dhiegohenrique/suntech-back);
 2) npm run e2e;
+
+Para gerar a versão de distribuição:
+1) npm run build;
 
 A cada commit, serão realizados testes unitários no Travis. Se passarem, o deploy será realizado em https://suntech-front-ang2.herokuapp.com/
