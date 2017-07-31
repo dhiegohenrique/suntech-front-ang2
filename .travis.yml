@@ -3,12 +3,3 @@ node_js:
 - 7.4.0
 notifications:
   email: false
-env:
-  global:
-  - NODE_ENV: test
-before_install:
-- npm install -g @angular/cli
-- npm install -g gulp@3.9.1
-script:
-- npm run build
-- cd dist
