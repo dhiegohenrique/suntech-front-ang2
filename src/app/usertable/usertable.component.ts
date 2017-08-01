@@ -79,23 +79,4 @@ export class UserTableComponent implements OnInit {
   getPage() {
     return (this.offset / this.limit);
   }
-
-  showConfirm() {
-      let disposable = this.dialogService.addDialog(ConfirmModalComponent, {
-        title: 'Confirmar exclusão',
-        message: 'Você confirma a exclusão deste item?'
-      })
-          .subscribe((isConfirmed)=>{
-              if(isConfirmed) {
-                  console.log('confirmou exclusão');
-              }
-              else {
-                  console.log('negou exclusão');
-              }
-          });
-
-      setTimeout(()=>{
-          disposable.unsubscribe();
-      },20000);
-  }
 }
